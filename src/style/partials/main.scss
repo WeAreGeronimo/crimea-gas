@@ -299,7 +299,7 @@
     }
     &:checked+label::before {
       content: "";
-      background: url("../img/checkmark.png");
+      background: url("img/checkmark.png");
       width: 0.625rem;
       height: 0.625rem;
       background-repeat: no-repeat;
