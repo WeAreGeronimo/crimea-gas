@@ -1,0 +1,153 @@
+@import "partials/fonts";
+@import "partials/utils";
+@import "partials/header";
+@import "partials/main";
+@import "partials/footer";
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Muller Regular';
+}
+
+html {
+  font-size: 24px;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 60.1rem;
+  z-index: 0;
+}
+
+.customBtn {
+  border: none;
+  border-radius: 0.4167rem;
+  padding: 0 0.8333rem;
+  position: relative;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Muller Medium";
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  &:before {
+    transition: all 0.2s ease-out;
+    display: block;
+    content: "";
+    border-radius: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: -0.25rem;
+    z-index: -1;
+  }
+}
+
+.requestForCall {
+  &-phone {
+    width: 11.083rem;
+    align-self: self-start;
+    padding: 1.042rem 0.833rem;
+    border-radius: 0.417rem 0 0 0.417rem;
+    box-shadow: inset 0.0833rem 0.0833rem 0.2917rem -0.125rem rgba(0,0,0,0.2);
+    border: none;
+    outline: none;
+    margin: 0.2083rem 0 0;
+  }
+
+  &-sendClaim {
+    width: 11.8333rem;
+    height: 3rem;
+    margin: 0 1.583rem 0 0;
+    background: linear-gradient(0deg, rgba(235,28,37,1) 0%, rgba(240,74,70,1) 100%);
+    font-size: 0.625rem;
+    line-height: 0.7083rem;
+    &:before {
+      background: #c3141b;
+    }
+  }
+}
+
+.nextButton, .prevButton {
+  border: none;
+  background: none;
+  position: absolute;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.prevButton {
+  left: -3%;
+  top: 30%;
+  img {
+    transform: rotate(180deg);
+  }
+}
+
+.nextButton {
+  right: -3%;
+  top: 30%;
+}
+
+.owl-stage > div {
+  border: 1px solid rgba(0,0,0,.2);
+}
+
+
+@media screen and (min-width: 1024px){
+  html {
+    font-size: 1.14vw;
+  }
+}
+
+@media screen and (min-width: 769px) and  (max-width: 1024px){
+  html {
+    font-size: 1.6vw;
+    }
+
+  .container {
+    width: 95%;
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .nextButton, .prevButton {
+    top: unset;
+    bottom: -5%;
+    background: rgba(0,0,0,0.2);
+    width: 20%;
+    height: 50px;
+  }
+
+  .prevButton {
+    left: 20%;
+  }
+
+  .nextButton {
+    right: 20%;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  html {
+    font-size: 20px;
+    overflow-x: hidden;
+  }
+}
+
+
+
+
